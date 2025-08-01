@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    buildCommand: pnpm install && pnpm build:n8n
+    startCommand: pnpm start
+    envVars:
+      - key: N8N_PORT
+        value: 10000
+      - key: N8N_HOST
+        value: 0.0.0.0
